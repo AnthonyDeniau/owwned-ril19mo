@@ -21,14 +21,16 @@ python manage.py runserver
 ```
 
 
-1- (Once by app) Créer l'application
+1- (Once by app) Créer l'application 
 ```bash
-mkdir apps/organization
+mkdir apps/organization  -> si vous etes sur windwows: mkdir apps\organization  -> a la racine du projet
 python manage.py startapp organization apps/organization
 ```
 
-2- Ajouter l'application au fichier project/settings.py
+2- Ajouter l'application au fichier project/settings.py -> dans le backend
 3- Register le model dans admin.py
+
+3.5- faire le model
 
 4- Update Database Schema
 ```bash
