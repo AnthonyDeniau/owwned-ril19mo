@@ -30,12 +30,14 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'apps.organization',
+    'apps.location',
     'apps.supplier',
     'apps.documentation',
     'apps.team',
     'apps.asset',
     'apps.history_event',
     'apps.user_profile',
+    'django_filters',
     'graphene_django',
     'django.contrib.admin',
     'django.contrib.auth',
