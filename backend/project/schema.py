@@ -7,6 +7,7 @@ from apps.team import schema as team_schema
 from apps.asset import schema as asset_schema
 from apps.history_event import schema as history_event_schema
 from apps.inventory import schema as inventory_schema
+from apps.user_profile import schema as user_profile_schema
 
 
 class Query(inventory_schema.Query, history_event_schema.Query, asset_schema.Query, team_schema.Query, supplier_schema.Query, location_schema.Query, organization_schema.Query, graphene.ObjectType):
