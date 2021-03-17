@@ -3,12 +3,15 @@ from django.db import models
 from django.conf import settings
 from enum import Enum
 
+from apps.asset.models import Asset
+
 # Create your models here.
 
-class Status(Enum):
-
-    OK = "OK"
-    ERROR = "ERROR"
+class Status(models.Model):
+    choices = (
+        ('OK', 'ok'),
+        ('ERROR', 'error')
+    )
 
 class InventorySession(models.Model):
     start_date = models.DateField()
@@ -24,7 +27,7 @@ class InventoryItem(models.Model):
     inventorist = models.ForeignKey(settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL, null = True, blank= True)
     date = models.DateField()
-    status = models.CharField(choices=Status.choices)
+    status = models.CharField(max_length=5, choices=Status.choices)
     comment = models.TextField()
 
 class Inventory(models.Model):
