@@ -8,7 +8,7 @@ from ..supplier.models import Supplier
 class Asset(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(max_length=200)
-    picture = models.CharField(max_length=200)
+    picture = models.CharField(max_length=200, default="")
     cost = models.DecimalField(max_digits=16, decimal_places=2)
     # supplier = models.ForeignKey()
     room = models.ForeignKey(

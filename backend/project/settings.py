@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'apps.asset',
     'apps.history_event',
     'apps.user_profile',
+    'apps.inventory',
     'django_filters',
     'graphene_django',
     'django.contrib.admin',
